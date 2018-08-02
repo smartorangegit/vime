@@ -1,0 +1,25 @@
+<div class="page-header">
+    <h1>Авторизация</h1>
+</div>
+
+<?php echo $this->tag->form("authorization/login"); ?>
+
+<p>
+    <label for="email">E-mail</label>
+    <?php echo $this->tag->textField(["placeholder" => "Введите e-mail","class"=>"required","email"]); ?>
+</p>
+
+<p>
+    <label for="password">Пароль</label>
+    <?php echo $this->tag->passwordField(["placeholder" => "Введите пароль","class"=>"required","password"]); ?>
+</p>
+<span class="text-info"></span>
+<p>
+    <input name="btn-send"  type="button"   class="btn btn-primary"  value="Войти" />
+    <a style="margin-left: 50px" href="/recovery/">Забыли пароль?</a>
+</p>
+
+</form>
+
+<?php echo $this->getContent(); ?>
+

@@ -1,0 +1,34 @@
+<? if (empty($form)) { ?>
+    <div class="page-header">
+        <h1>Введите новый пароль</h1>
+
+    </div>
+<?php echo $this->getContent(); ?>
+<?php echo $this->tag->form(["recovery/request_post", "id"=>"form_recovery"]); ?>
+<p>
+    <label for="login">Пароль</label>
+    <?php echo $this->tag->passwordField(["placeholder" => "Пароль","password", "onkeyup"=>"javascript:countme('form_recovery');"]); ?>
+</p>
+<p>
+    <label for="login">Подтвердите пароль:</label>
+    <?php echo $this->tag->passwordField(["placeholder" => "Подтвердите пароль","repassword"]); ?>
+</p>
+<input type="text" hidden name="request" value="<?=$recovery?>" class="input required" >
+
+
+
+<span class="text-info-success"></span>
+<p>
+    <input name="btn-send"  type="button"   class="btn btn-primary"  value="Востановить" />
+</p>
+
+<?= $this->tag->endForm() ?>
+
+
+<? } else
+{
+
+   echo '<div class="page-header"><h1>Востановление пароля</h1></div>';
+    echo $form;
+}
+?>

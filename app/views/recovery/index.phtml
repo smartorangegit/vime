@@ -1,0 +1,18 @@
+<div class="page-header">
+    <h1>Востановление пароля</h1>
+</div>
+
+<?php echo $this->tag->form(["recovery/recovery", "id"=>"form_recovery"]); ?>
+
+<p>
+    <label for="login">Ваш e-mail</label>
+    <?php echo $this->tag->textField(["placeholder" => "Впишите e-mail","email","onkeyup"=>"javascript:countme('form_recovery');"]); ?>
+</p>
+
+
+<span class="text-info-success"></span>
+<p>
+    <input name="btn-send"  type="button"   class="btn btn-primary"   value="Востановить" />
+</p>
+
+<?= $this->tag->endForm() ?>

@@ -1,0 +1,12 @@
+.success{
+    color: #e84118;
+    border: 1px solid #e84118!important;
+}
+.text-info, .text-info-success{
+    display: block;
+    color: #e84118;
+    margin-top: 5px;
+}
+.text-info-success{
+    color: #0a8b0a;
+}

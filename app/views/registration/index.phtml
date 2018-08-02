@@ -1,0 +1,32 @@
+<div class="page-header">
+    <h1>Регистрация</h1>
+</div>
+
+<?php echo $this->tag->form("authorization/registration"); ?>
+
+<p>
+    <label for="email">E-mail</label>
+    <?php echo $this->tag->textField(["placeholder" => "Введите e-mail","email", "class"=>"required"]); ?>
+</p>
+<p>
+    <label for="phone">Телевон</label>
+    <?php echo $this->tag->textField(["placeholder" => "Введите Телевон","phone", "class"=>"required"]); ?>
+</p>
+<p>
+    <label for="password">Пароль</label>
+    <?php echo $this->tag->passwordField(["placeholder" => "Введите пароль","password", "class"=>"required"]); ?>
+</p>
+
+<p>
+    <label for="repassword">Подтвердите пароль</label>
+    <?php echo $this->tag->passwordField(["placeholder" => "Подтвердите пароль","repassword", "class"=>"required"]); ?>
+</p>
+<span class="text-info"></span>
+<p>
+    <input name="btn-send"  type="button"   class="btn btn-primary"  value="Зарегистрироваться" />
+</p>
+
+</form>
+
+<?php echo $this->getContent(); ?>
+
